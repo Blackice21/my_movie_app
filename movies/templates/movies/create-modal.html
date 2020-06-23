@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="modal fade" id="modal-create">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -37,3 +38,42 @@
 		</div>
 	</div>
 </div>
+=======
+ <div class='modal fade' id="modal-create">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+
+                <div class="modal-body">
+                    <form action="{% url 'create' %}" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="movieName">Name</label>
+                            <input type="text" class="form-control" id="movieName" placeholder="Enter name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="moviePicture">Picture</label>
+                            <input type="url" class="form-control" id="moviePicture" placeholder="Enter image url" name="picture" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="movieRating">Rating</label>
+                            <input type="number" class="form-control" id="movieRating" placeholder="Enter 1-10" name="rating" min="0" max="10" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="movieNotes">Notes</label>
+                            <input type="text" class="form-control" id="movieNotes" placeholder="Enter notes" name="notes" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Create movie</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+ </div>
+
+>>>>>>> step_0_start
